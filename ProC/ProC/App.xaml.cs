@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProC.View;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace ProC
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MenuPrincipal();
         }
 
         protected override void OnStart()

@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace ProC
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace ProC.View
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class MenuPrincipal : TabbedPage
     {
-        public MainPage()
+        public MenuPrincipal ()
         {
             InitializeComponent();
         }
