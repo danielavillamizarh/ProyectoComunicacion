@@ -5,10 +5,16 @@
              Icon="Comunicacion_Icon.png"
              >
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="ComunicacionPage"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <ScrollView>
+            <StackLayout>
+
+               <!--Mario estuvo aqui-->
+            <Entry x:Name="txtDestino" Placeholder="alguien@ejemplo.com" />
+            <Entry x:Name="txtAbout" Placeholder="Asunto" />
+            <Editor x:Name="txtBody" AutoSize="TextChanges" Placeholder="Agregue un mensaje."></Editor>
+                <Button x:Name="btnSend" Text="Enviar" Clicked="BtnSend_ClickedAsync" BackgroundColor="#008f39"></Button>
+
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage> 
