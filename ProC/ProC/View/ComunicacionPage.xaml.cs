@@ -17,8 +17,13 @@ namespace ProC.View
 		public ComunicacionPage ()
 		{
             InitializeComponent ();
-         }
-                            
+            NavigationPage.SetHasBackButton(this, false);
+            ((NavigationPage)Application.Current.MainPage).BackgroundColor = Color.Green;
+            ((NavigationPage)Application.Current.MainPage).BarTextColor = Color.Black;
+
+
+        }
+
         private async void BtnSend_ClickedAsync(object sender, EventArgs e)
         {
             await SendMailAsync();
