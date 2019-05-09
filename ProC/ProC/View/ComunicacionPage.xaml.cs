@@ -54,5 +54,10 @@ namespace ProC.View
 
             }
         }
+
+        private void AddNav_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new AgregarPersona());
+        }
     }
 }

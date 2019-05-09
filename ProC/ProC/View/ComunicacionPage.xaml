@@ -4,7 +4,19 @@
              x:Class="ProC.View.ComunicacionPage"
              Icon="Comunicacion_Icon.png"
              >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Clicked="AddNav_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="add_button.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
+        
         <ScrollView>
             <StackLayout>
 
