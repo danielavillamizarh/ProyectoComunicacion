@@ -15,13 +15,25 @@
                   BackgroundColor="#FAFAFA"
                         Clicked="btnNavAdd_Clicked"/>
         </StackLayout>
-
     </NavigationPage.TitleView>
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+    
+    
+        <ListView x:Name="PersonaList" HasUnevenRows="True" ItemTapped="btnNavComunicacion_Clicked">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.ContextActions>
+                            <MenuItem Text="Borrar" Clicked="BorrarPersona_Clicked" IsDestructive="true" CommandParameter="{Binding .}"/>
+                        </ViewCell.ContextActions>
+                        <StackLayout Spacing="2">
+                            <Label Text="{Binding Nombre,StringFormat='Nombre{0:F0}'}" FontSize="15" FontAttributes="Bold"/>
+                            <Label Text="{Binding Apellido,StringFormat='Apellido{0:F0}'}" FontSize="15" FontAttributes="Bold"/>
+                            <Label Text="{Binding Departamento,StringFormat='Departamento{0:F0}'}" FontSize="15" FontAttributes="Bold"/>
+                            <Label Text="{Binding Correo,StringFormat='Correo{0:F0}'}" FontSize="15" FontAttributes="Bold"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+   
 </ContentPage>

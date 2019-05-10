@@ -4,9 +4,19 @@
              x:Class="ProC.View.AgregarPersona">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Agregado"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="nombre" FontAttributes="Bold" TextColor="Black" />
+            <Entry Placeholder="Nombre" FontSize="12" HorizontalOptions="FillAndExpand" x:Name="nombre"/>
+
+            <Label Text="apellido" FontAttributes="Bold" TextColor="Black" />
+            <Entry Placeholder="Apellido" FontSize="12" HorizontalOptions="FillAndExpand" x:Name="apellido"/>
+
+            <Label Text="departamento" FontAttributes="Bold" TextColor="Black" />
+            <Entry Placeholder="Departamento" FontSize="12" HorizontalOptions="FillAndExpand" x:Name="departamento"/>
+
+            <Label Text="correo" FontAttributes="Bold" TextColor="Black" />
+            <Entry Placeholder="Correo" FontSize="12" HorizontalOptions="FillAndExpand" x:Name="correo"/>
+
+            <Button Text="Guardar" Clicked="GuardarPersona_Clicked" FontSize="12" HorizontalOptions="FillAndExpand"  x:Name="btnGuardar"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -10,12 +10,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.5.231" />
     <PackageReference Include="Xamarin.Essentials" Version="1.1.0" />
     <PackageReference Include="Xamarin.Forms" Version="3.6.0.344457" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Model\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
 
