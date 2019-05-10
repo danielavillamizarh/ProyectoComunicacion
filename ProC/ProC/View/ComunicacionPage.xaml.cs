@@ -17,7 +17,7 @@ namespace ProC.View
 		public ComunicacionPage ()
 		{
             InitializeComponent ();
-         }
+        }
                             
         private async void BtnSend_ClickedAsync(object sender, EventArgs e)
         {
@@ -57,7 +57,7 @@ namespace ProC.View
 
         private void AddNav_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AgregarPersona());
+           
         }
     }
 }

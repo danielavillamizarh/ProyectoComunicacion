@@ -12,7 +12,8 @@ namespace ProC
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new MenuPrincipal());
+            MainPage = new NavigationPage(new ListaPersonas());
+
         }
 
         protected override void OnStart()

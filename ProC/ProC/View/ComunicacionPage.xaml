@@ -1,22 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ProC.View.ComunicacionPage"
              Icon="Comunicacion_Icon.png"
-             >
+             x:Class="ProC.View.ComunicacionPage" >
 
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Clicked="AddNav_Clicked">
-            <ToolbarItem.Icon>
-                <OnPlatform x:TypeArguments="FileImageSource">
-                    <On Platform="Android" Value="add_button.png" />
-                </OnPlatform>
-            </ToolbarItem.Icon>
-        </ToolbarItem>
-    </ContentPage.ToolbarItems>
-    
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal">
+                <Label Text="Comunicacion"
+                   HorizontalOptions="StartAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   FontAttributes="Bold"
+                   FontSize="22"
+                   TextColor="Black"/>
+                <Button Image="add_button.png"
+                  BackgroundColor="#FAFAFA"
+                        Clicked="AddNav_Clicked"/>
+            </StackLayout>
+  
+    </NavigationPage.TitleView>
+
     <ContentPage.Content>
-        
         <ScrollView>
             <StackLayout>
 
@@ -25,7 +28,6 @@
             <Entry x:Name="txtAbout" Placeholder="Asunto" />
             <Editor x:Name="txtBody" AutoSize="TextChanges" Placeholder="Agregue un mensaje."></Editor>
                 <Button x:Name="btnSend" Text="Enviar" Clicked="BtnSend_ClickedAsync" BackgroundColor="#008f39"></Button>
-
         </StackLayout>
         </ScrollView>
     </ContentPage.Content>
