@@ -7,21 +7,32 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
+using ProC.Model;
 
 namespace ProC.View
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ComunicacionPage : ContentPage
 	{
-        
-		public ComunicacionPage ()
+        #region Metodos
+        public ComunicacionPage()
 		{
-            InitializeComponent ();
+            InitializeComponent();
+                       
         }
-                            
-        private async void BtnSend_ClickedAsync(object sender, EventArgs e)
-        {
-            await SendMailAsync();
+              
+
+        public ComunicacionPage(Persona datos) {
+
+            InitializeComponent();
+
+            txtDestino.Text = datos.Correo + ";";
+
+            this.Title = "Enviar correo a "+ datos.Nombre +" "+ datos.Apellido;
+            this.Navigation.PopToRootAsync();
+
+
+
         }
 
         private async Task SendMailAsync() {
@@ -55,9 +66,14 @@ namespace ProC.View
             }
         }
 
-        private void AddNav_Clicked(object sender, EventArgs e)
+        
+        #endregion
+
+        #region Eventos
+        private async void BtnSend_ClickedAsync(object sender, EventArgs e)
         {
-           
+            await SendMailAsync();
         }
+        #endregion
     }
 }

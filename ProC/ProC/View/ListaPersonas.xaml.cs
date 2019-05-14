@@ -38,7 +38,7 @@ namespace ProC.View
         //Navegacion para registrar
         private void btnNavAdd_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new AgregarPersona(null));
+            Navigation.PushAsync(new AgregarPersona());
         }
 
         //Navegacion para actualizar con los campos pertenecientes
