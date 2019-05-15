@@ -17,6 +17,9 @@
             <Entry Placeholder="Correo" FontSize="12" HorizontalOptions="FillAndExpand" x:Name="correo"/>
 
             <Button Text="Guardar" Clicked="GuardarPersona_Clicked" FontSize="12" HorizontalOptions="FillAndExpand"  x:Name="btnGuardar"/>
+            
+            <Button Text="Contactar" Clicked="BtnContactar_Clicked" FontSize="12" HorizontalOptions="FillAndExpand"  x:Name="btnContactar"/>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -17,6 +17,11 @@ namespace ProC.View
     {
         Persona PersonaDetalles;
 
+        public AgregarPersona()
+        {
+            InitializeComponent();
+            btnContactar.IsVisible = false;
+        }
         public AgregarPersona(Persona detalles)
         {
             InitializeComponent();
@@ -26,7 +31,7 @@ namespace ProC.View
                 PopulateDetalles(PersonaDetalles);
             }
         }
-
+        
 
         #region Metodos
         private void PopulateDetalles(Persona detalles)
@@ -36,12 +41,12 @@ namespace ProC.View
             departamento.Text = detalles.Departamento;
             correo.Text = detalles.Correo;
             btnGuardar.Text = "Actualizar";
-            this.Title = "Edit Employee - Comunicacion";
+            this.Title = "Editar Contacto - Comunicacion";
         }
 
         private void GuardarPersona(object sender, EventArgs e)
         {
-            if (btnGuardar.Text == "Guardar")
+            if (btnGuardar.Text == "Guardar" )
             {
                 Persona persona = new Persona();
                 persona.Nombre = nombre.Text;
@@ -56,7 +61,7 @@ namespace ProC.View
                 }
                 else
                 {
-                    DisplayAlert("Message", "No se ha podido guardar", "Ok");
+                    DisplayAlert("Error", "No se ha podido guardar", "Ok");
                 }
             }
             else
@@ -74,7 +79,7 @@ namespace ProC.View
                 }
                 else
                 {
-                    DisplayAlert("Message", "No se ha podido Actualizar", "Ok");
+                    DisplayAlert("Error", "No se ha podido Actualizar", "Ok");
                 }
             }
         }
@@ -116,11 +121,16 @@ namespace ProC.View
                 }
                 else
                 {
-                    DisplayAlert("Message", "No se ha podido Actualizar", "Ok");
+                    DisplayAlert("Error", "No se ha podido Actualizar", "Ok");
                 }
             }
         }
         #endregion
 
+        
+        private void BtnContactar_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new ComunicacionPage(PersonaDetalles));
+        }
     }
 }

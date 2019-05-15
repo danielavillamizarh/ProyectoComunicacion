@@ -26,10 +26,10 @@
                             <MenuItem Text="Borrar" Clicked="BorrarPersona_Clicked" IsDestructive="true" CommandParameter="{Binding .}"/>
                         </ViewCell.ContextActions>
                         <StackLayout Spacing="2">
-                            <Label Text="{Binding Nombre,StringFormat='Nombre{0:F0}'}" FontSize="15" FontAttributes="Bold"/>
-                            <Label Text="{Binding Apellido,StringFormat='Apellido{0:F0}'}" FontSize="15" FontAttributes="Bold"/>
-                            <Label Text="{Binding Departamento,StringFormat='Departamento{0:F0}'}" FontSize="15" FontAttributes="Bold"/>
-                            <Label Text="{Binding Correo,StringFormat='Correo{0:F0}'}" FontSize="15" FontAttributes="Bold"/>
+                            <Label Text="{Binding Nombre,StringFormat='Nombre: {0:F0}'}" FontSize="15" FontAttributes="Bold"/>
+                            <Label Text="{Binding Apellido,StringFormat='Apellido: {0:F0}'}" FontSize="15" FontAttributes="Bold"/>
+                            <Label Text="{Binding Departamento,StringFormat='Departamento: {0:F0}'}" FontSize="15" FontAttributes="Bold"/>
+                            <Label Text="{Binding Correo,StringFormat='Correo: {0:F0}'}" FontSize="15" FontAttributes="Bold"/>
                         </StackLayout>
                     </ViewCell>
                 </DataTemplate>

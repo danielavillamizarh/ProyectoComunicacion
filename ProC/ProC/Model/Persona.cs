@@ -13,6 +13,7 @@
         public string Nombre { get; set; }
         public string Apellido { get; set; }
         public string Departamento { get; set; }
+        [Unique]
         public string Correo { get; set; }
     }
 }

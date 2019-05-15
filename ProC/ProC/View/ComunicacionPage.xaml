@@ -4,20 +4,7 @@
              Icon="Comunicacion_Icon.png"
              x:Class="ProC.View.ComunicacionPage" >
 
-    <NavigationPage.TitleView>
-        <StackLayout Orientation="Horizontal">
-                <Label Text="Comunicacion"
-                   HorizontalOptions="StartAndExpand"
-                   VerticalOptions="CenterAndExpand"
-                   FontAttributes="Bold"
-                   FontSize="22"
-                   TextColor="Black"/>
-                <Button Image="add_button.png"
-                  BackgroundColor="#FAFAFA"
-                        Clicked="AddNav_Clicked"/>
-            </StackLayout>
-  
-    </NavigationPage.TitleView>
+    
 
     <ContentPage.Content>
         <ScrollView>
